@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UC San Diego Page</title>
     <style>
         body {
@@ -18,24 +18,25 @@
         }
 
         #colleges-logo {
-            width: 150%;
-            max-width: 800px;
+            max-width: 100%;
+            max-height: 500px;
         }
 
         #triton-logo {
-            width: 150%;
-            max-width: 600px;
+            max-width: 100%;
+            max-height: 200px;
         }
 
         #ucsd-logo {
-            width: auto;
-            max-width: 300px;
+            max-width: 75%;
+            max-height: 150px;
         }
 
         section {
-            display: inline-block;
+            display: block;
             width: 100%;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         h2,
@@ -45,7 +46,6 @@
         }
 
         nav {
-            position: -webkit-sticky;
             position: sticky;
             top: 0;
             background-color: white;
@@ -57,7 +57,6 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
             background-color: white;
             text-align: left;
         }
@@ -99,7 +98,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
             justify-items: center;
         }
@@ -108,8 +107,33 @@
             background-color: #182b49;
             color: white;
             padding: 20px;
-            max-height: none;
-            overflow: visible;
+            width: 100%;
+            box-sizing: border-box;
+            max-height: 150px; /* Set fixed height */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        @media screen and (max-width: 800px) {
+            nav ul li {
+                display: none;
+            }
+
+            #ucsd-logo {
+                max-width: 75%;
+                max-height: 150px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -128,14 +152,12 @@
 
     <section id="section1">
         <h2>Section 1</h2>
-        
         <img id="triton-logo" src="Tritons_Logo_UCSD.png" alt="Triton Logo">
         <p>Lorem ipsum ...</p>
     </section>
 
     <section id="section2">
         <h2>Section 2</h2>
-        
         <img id="colleges-logo" src="Colleges_UCSD_Logo2.png" alt="UCSD Colleges Logo">
         <p>Lorem ipsum ...</p>
     </section>
@@ -143,9 +165,40 @@
     <section id="section3">
         <h2>Section 3</h2>
         <div class="grid-container">
-            <div class="grid-item">Column 1 content goes here.</div>
-            <div class="grid-item">Column 2 content goes here.</div>
-            <div class="grid-item">Column 3 content goes here.</div>
+            <div class="grid-item">Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+                Column 1 content goes here.
+            </div>
+            <div class="grid-item">Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+                Column 2 content goes here.
+            </div>
+            <div class="grid-item">Column 3 content goes here.
+                Column 3 content goes here.
+                Column 3 content goes here.
+                Column 3 content goes here.
+                Column 3 content goes here.
+                Column 3 content goes here.
+                Column 3 content goes here.
+                Column 3 content goes here.
+                Column 3 content goes here.
+            </div>
             <div class="grid-item">Column 4 content goes here.</div>
         </div>
     </section>
