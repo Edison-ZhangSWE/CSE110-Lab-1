@@ -1,19 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC San Diego Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        #colleges-logo {
+            width: 150%;
+            max-width: 800px;
+        }
+
+        #triton-logo {
+            width: 150%;
+            max-width: 600px;
+        }
+
+        #ucsd-logo {
+            width: auto;
+            max-width: 300px;
+        }
+
+        section {
+            display: inline-block;
+            width: 100%;
+            padding: 20px;
+        }
+
+        h2,
+        p {
+            font-size: 28px;
+            text-align: left;
+        }
+
+        nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            border-bottom: 2px solid #ccc;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+            text-align: left;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 14px 20px;
+            color: #333;
+            font-size: 28px;
+        }
+
+        nav ul li a:hover {
+            background-color: #182b49;
+            color: white;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        #section1 {
+            background-color: rgb(245, 240, 230);
+        }
+
+        #section2 {
+            background-image: url('background_image_ucsd.jpg');
+            background-size: cover;
+            color: white;
+        }
+
+        #section3 {
+            background-color: rgb(245, 240, 230);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            justify-items: center;
+        }
+
+        .grid-item {
+            background-color: #182b49;
+            color: white;
+            padding: 20px;
+            max-height: none;
+            overflow: visible;
+        }
+    </style>
+</head>
 
 <body>
-    <img src="UC_SanDiegoLogo.png" alt="UCSD_Logo">
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Section 2</a>
-    <div><h2 id="section1">Section 1</h2>
-      </div>
-    <img src="Tritons_Logo_UCSD.png" alt="Tritons_Logo_UCSD">
-    <div><h2 id="section2">Section 2</h2>
-      </div>
-    <img src="Colleges_UCSD_Logo.png" alt="UCSD_Colleges_Logo">
+
+    <img id="ucsd-logo" src="UC_SanDiegoLogo.png" alt="UCSD Logo">
+
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h2>Section 1</h2>
+        
+        <img id="triton-logo" src="Tritons_Logo_UCSD.png" alt="Triton Logo">
+        <p>Lorem ipsum ...</p>
+    </section>
+
+    <section id="section2">
+        <h2>Section 2</h2>
+        
+        <img id="colleges-logo" src="Colleges_UCSD_Logo2.png" alt="UCSD Colleges Logo">
+        <p>Lorem ipsum ...</p>
+    </section>
+
+    <section id="section3">
+        <h2>Section 3</h2>
+        <div class="grid-container">
+            <div class="grid-item">Column 1 content goes here.</div>
+            <div class="grid-item">Column 2 content goes here.</div>
+            <div class="grid-item">Column 3 content goes here.</div>
+            <div class="grid-item">Column 4 content goes here.</div>
+        </div>
+    </section>
 
 </body>
-
 
 </html>
